@@ -37,6 +37,14 @@ Tab:AddButton({
 	Name = "samuraa1 Hub",
 	Callback = function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/samuraa1/Solara-Hub/refs/heads/main/Solara%20Hub.lua"))()
+		OrionLib:MakeNotification({
+			Name = "Completed",
+			Content = "The script has fully loaded!",
+			Image = "rbxassetid://4483345998",
+			Time = 3
+		})
+		
+		
   	end    
 })
 
@@ -50,6 +58,14 @@ Tab:AddButton({
 	Name = "Sky Hub",
 	Callback = function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/SkyHub.txt"))()
+	OrionLib:MakeNotification({
+		Name = "Completed",
+		Content = "The script has fully loaded!",
+		Image = "rbxassetid://4483345998",
+		Time = 3
+	})
+	
+	
   	end    
 })
 
@@ -59,6 +75,14 @@ Tab:AddButton({
 	Name = "Owl Hub",
 	Callback = function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))()
+	OrionLib:MakeNotification({
+		Name = "Completed",
+		Content = "The script has fully loaded!",
+		Image = "rbxassetid://4483345998",
+		Time = 3
+	})
+	
+	
   	end    
 })
 
@@ -67,19 +91,156 @@ Tab:AddButton({
 	Name = "Reaper Hub",
 	Callback = function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/AyoReaper/Reaper-Hub/main/loader.lua"))()
+	OrionLib:MakeNotification({
+		Name = "Completed",
+		Content = "The script has fully loaded!",
+		Image = "rbxassetid://4483345998",
+		Time = 3
+	})
+	
+	
   	end    
 })
 
 
+Tab:AddButton({
+	Name = "Domain Hub v2",
+	Callback = function()
+		loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexsoftworks/Domain/main/source'),true))()
+		OrionLib:MakeNotification({
+			Name = "Completed",
+			Content = "The script has fully loaded!",
+			Image = "rbxassetid://4483345998",
+			Time = 3
+		})
+		
+		
+  	end    
+})
 
+Tab:AddLabel("Code: 2r0jfvlnjtq7")
+Tab:AddLabel("Or try this: u7dbHda01L ")
 
+Tab:AddButton({
+	Name = "Bruh Hub",
+	Callback = function()
+		loadstring(game:HttpGet("https://bruh.keshhub.com/.lua"))()
+		OrionLib:MakeNotification({
+			Name = "Completed",
+			Content = "The script has fully loaded!",
+			Image = "rbxassetid://4483345998",
+			Time = 3
+		})
+		
+		
+	end    
+})
 
+Tab:AddButton({
+	Name = "Dark Hub",
+	Callback = function()
+		loadstring(game:HttpGet(("https://darkhub.xyz/remote-script.lua"), true))()
+		OrionLib:MakeNotification({
+			Name = "Completed",
+			Content = "The script has fully loaded!",
+			Image = "rbxassetid://4483345998",
+			Time = 3
+		})
+		
+		
+	end    
+})
 
+Tab:AddButton({
+	Name = "CocoZ Hub",
+	Callback = function()
+		loadstring(game:HttpGet(('https://gitlab.com/cococc/cocohub/-/raw/master/CocoLoader'),true))()
+		OrionLib:MakeNotification({
+			Name = "Completed",
+			Content = "The script has fully loaded!",
+			Image = "rbxassetid://4483345998",
+			Time = 3
+		})
+		
+		
+	end    
+})
 
+Tab:AddButton({
+	Name = "Code Hub",
+	Callback = function()
+		loadstring(game:HttpGet("https://pastebin.com/raw/dwRdB740"))()
+		OrionLib:MakeNotification({
+			Name = "Completed",
+			Content = "The script has fully loaded!",
+			Image = "rbxassetid://4483345998",
+			Time = 3
+		})
+		
+		
+	end    
+})
 
+Tab:AddButton({
+	Name = "LioK Hub",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/LioK251/Scripts/main/LioKHUB", true))()
+		OrionLib:MakeNotification({
+			Name = "Completed",
+			Content = "The script has fully loaded!",
+			Image = "rbxassetid://4483345998",
+			Time = 3
+		})
+		
+		
+	end    
+})
 
+Tab:AddButton({
+	Name = "Straw Hub",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/vep1032/VepStuff/main/STRAW%20HUB%20RELEASE"))()
+		OrionLib:MakeNotification({
+			Name = "Completed",
+			Content = "The script has fully loaded!",
+			Image = "rbxassetid://4483345998",
+			Time = 3
+		})
+		
+		
 
+	end    
+})
 
+Tab:AddButton({
+	Name = "V. G. Hub",
+	Callback = function()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+		OrionLib:MakeNotification({
+			Name = "Completed",
+			Content = "The script has fully loaded!",
+			Image = "rbxassetid://4483345998",
+			Time = 3
+		})
+		
+		
+	end    
+})
+
+Tab:AddButton({
+	Name = "Wet Hub",
+	Callback = function()
+		loadstring(game:HttpGet("https://pastebin.com/raw/KFdDTVLT"))()
+		OrionLib:MakeNotification({
+			Name = "Completed",
+			Content = "The script has fully loaded!",
+			Image = "rbxassetid://4483345998",
+			Time = 3
+		})
+		
+		
+	end    
+})
 
 
 
@@ -96,11 +257,86 @@ Tab:AddButton({
   	end    
 })
 
+Tab:AddLabel("If you notice a bug or want to suggest an idea,")
+Tab:AddLabel("then write to me in discord : o5_3counsil")
 
 
 
 
+local Tab = Window:MakeTab({
+	Name = "Universal scripts",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
 
+
+local Section = Tab:AddSection({
+	Name = "Universal scripts"
+})
+
+--[[
+Name = <string> - The name of the section.
+]]
+
+Tab:AddButton({
+	Name = "Nameless Admin",
+	Callback = function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source'))()
+	OrionLib:MakeNotification({
+		Name = "Completed",
+		Content = "The script has fully loaded!",
+		Image = "rbxassetid://4483345998",
+		Time = 3
+	})
+	
+	
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Infinity yield",
+	Callback = function()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+		OrionLib:MakeNotification({
+			Name = "Completed",
+			Content = "The script has fully loaded!",
+			Image = "rbxassetid://4483345998",
+			Time = 3
+		})
+		
+		
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Aimbot",
+	Callback = function()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/Exunys/Aimbot-Script/refs/heads/main/Aimbot%20Script.lua'))()
+		OrionLib:MakeNotification({
+			Name = "Completed",
+			Content = "The script has fully loaded!",
+			Image = "rbxassetid://4483345998",
+			Time = 3
+		})
+		
+		
+  	end    
+})
+
+Tab:AddButton({
+	Name = "ESP",
+	Callback = function()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/Exunys/ESP-Script/refs/heads/main/ESP.lua'))()
+		OrionLib:MakeNotification({
+			Name = "Completed",
+			Content = "The script has fully loaded!",
+			Image = "rbxassetid://4483345998",
+			Time = 3
+		})
+		
+		
+  	end    
+})
 
 
 
