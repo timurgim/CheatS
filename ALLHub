@@ -1,344 +1,270 @@
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+local function NotifiyingUser()
+    Rayfield:Notify({
+        Title = "Успешно!",
+        Content = "Скрипт успешно загрузился!",
+        Duration = 5,
+        Image = 4483362458,
+        Actions = { -- Notification Buttons
+     
+           Ignore = { -- Duplicate this table (or remove it) to add and remove buttons to the notification.
+              Name = "Хорошо!",
+              Callback = function()
+                 return(1)
+              end
+           },
+     
+     },
+     })
+    
+end
+
+local Window = Rayfield:CreateWindow({
+    Name = "Сборка Хабов!",
+    LoadingTitle = "Сборка Хабов Rayfield",
+    LoadingSubtitle = "by o5_3counsil",
+    Theme = "DarkBlue", -- DarkBlue, Green, Light, Default - more coming soon!
+ 
+    DisableRayfieldPrompts = false,
+ 
+    ConfigurationSaving = {
+       Enabled = true,
+       FolderName = AllTheHubsConf, -- Create a custom folder for your hub/game
+       FileName = "Big Hub"
+    },
+ 
+    Discord = {
+       Enabled = true, -- Prompt the user to join your Discord server if their executor supports it
+       Invite = "https://discord.gg/82C4JwVh", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
+       RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+    },
+ 
+    KeySystem = true, -- Set this to true to use our key system
+    KeySettings = {
+       Title = "Система ключей!",
+       Subtitle = "Нажмите на получить ссылку!",
+       Note = "https://ify.ac/1RFt Сюда!",
+       FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+       SaveKey = false, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+       GrabKeyFromSite = true, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+       Key = {"https://raw.githubusercontent.com/timurgim/CheatS/refs/heads/main/AllHubCode"} 
+    }
+ })
 
 
-
-local Window = OrionLib:MakeWindow({Name = "All Hubs", HidePremium = false, SaveConfig = true, ConfigFolder = "AllHubsConfig"})
-
---[[
-Name = <string> - The name of the UI.
-HidePremium = <bool> - Whether or not the user details shows Premium status or not.
-SaveConfig = <bool> - Toggles the config saving in the UI.
-ConfigFolder = <string> - The name of the folder where the configs are saved.
-IntroEnabled = <bool> - Whether or not to show the intro animation.
-IntroText = <string> - Text to show in the intro animation.
-IntroIcon = <string> - URL to the image you want to use in the intro animation.
-Icon = <string> - URL to the image you want displayed on the window.
-CloseCallback = <function> - Function to execute when the window is closed.
-]]
+local Tab = Window:CreateTab("Хабы", 4483362458) -- Title, Image
 
 
-
-local Tab = Window:MakeTab({
-	Name = "Hubs",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
+local Button = Tab:CreateButton({
+    Name = "samuraa1 Хаб",
+    Callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/samuraa1/Solara-Hub/refs/heads/main/Solara%20Hub.lua"))()
+    NotifiyingUser()
+    end,
+ })
+ local Button = Tab:CreateButton({
+   Name = "Sky Хаб",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/SkyHub.txt"))()
+   NotifiyingUser()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Owl Хаб",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))()
+   NotifiyingUser()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Reaper Хаб",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/AyoReaper/Reaper-Hub/main/loader.lua"))()
+   NotifiyingUser()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Domain V2 Хаб",
+   Callback = function()
+   loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexsoftworks/Domain/main/source'),true))()
+   NotifiyingUser()
+   end,
 })
 
+local Label = Tab:CreateLabel("Код 2r0jfvlnjtq7 ")
+local Label = Tab:CreateLabel("Или u7dbHda01L ")
 
-local Section = Tab:AddSection({
-	Name = "Hubs"
+local Button = Tab:CreateButton({
+   Name = "bruh Хаб",
+   Callback = function()
+   loadstring(game:HttpGet("https://bruh.keshhub.com/.lua"))()
+   NotifiyingUser()
+   end,
 })
-
---[[
-Name = <string> - The name of the section.
-]]
-
-Tab:AddButton({
-	Name = "samuraa1 Hub",
-	Callback = function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/samuraa1/Solara-Hub/refs/heads/main/Solara%20Hub.lua"))()
-		OrionLib:MakeNotification({
-			Name = "Completed",
-			Content = "The script has fully loaded!",
-			Image = "rbxassetid://4483345998",
-			Time = 3
-		})
-		
-		
-  	end    
+local Button = Tab:CreateButton({
+   Name = "Dark Хаб",
+   Callback = function()
+   loadstring(game:HttpGet(("https://darkhub.xyz/remote-script.lua"), true))()
+   NotifiyingUser()
+   end,
 })
-
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]]
-
-
-Tab:AddButton({
-	Name = "Sky Hub",
-	Callback = function()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/SkyHub.txt"))()
-	OrionLib:MakeNotification({
-		Name = "Completed",
-		Content = "The script has fully loaded!",
-		Image = "rbxassetid://4483345998",
-		Time = 3
-	})
-	
-	
-  	end    
+local Button = Tab:CreateButton({
+   Name = "CocoZ Хаб",
+   Callback = function()
+   loadstring(game:HttpGet(('https://gitlab.com/cococc/cocohub/-/raw/master/CocoLoader'),true))()
+   NotifiyingUser()
+   end,
 })
-
-
-
-Tab:AddButton({
-	Name = "Owl Hub",
-	Callback = function()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))()
-	OrionLib:MakeNotification({
-		Name = "Completed",
-		Content = "The script has fully loaded!",
-		Image = "rbxassetid://4483345998",
-		Time = 3
-	})
-	
-	
-  	end    
+local Button = Tab:CreateButton({
+   Name = "Code Хаб",
+   Callback = function()
+   loadstring(game:HttpGet("https://pastebin.com/raw/dwRdB740"))()
+   NotifiyingUser()
+   end,
 })
-
-
-Tab:AddButton({
-	Name = "Reaper Hub",
-	Callback = function()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/AyoReaper/Reaper-Hub/main/loader.lua"))()
-	OrionLib:MakeNotification({
-		Name = "Completed",
-		Content = "The script has fully loaded!",
-		Image = "rbxassetid://4483345998",
-		Time = 3
-	})
-	
-	
-  	end    
+local Button = Tab:CreateButton({
+   Name = "LioK Хаб",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/LioK251/Scripts/main/LioKHUB", true))()
+   NotifiyingUser()
+   end,
 })
-
-
-Tab:AddButton({
-	Name = "Domain Hub v2",
-	Callback = function()
-		loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexsoftworks/Domain/main/source'),true))()
-		OrionLib:MakeNotification({
-			Name = "Completed",
-			Content = "The script has fully loaded!",
-			Image = "rbxassetid://4483345998",
-			Time = 3
-		})
-		
-		
-  	end    
+local Button = Tab:CreateButton({
+   Name = "Straw Хаб",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/vep1032/VepStuff/main/STRAW%20HUB%20RELEASE"))()
+   NotifiyingUser()
+   end,
 })
-
-Tab:AddLabel("Code: 2r0jfvlnjtq7")
-Tab:AddLabel("Or try this: u7dbHda01L ")
-
-Tab:AddButton({
-	Name = "Bruh Hub",
-	Callback = function()
-		loadstring(game:HttpGet("https://bruh.keshhub.com/.lua"))()
-		OrionLib:MakeNotification({
-			Name = "Completed",
-			Content = "The script has fully loaded!",
-			Image = "rbxassetid://4483345998",
-			Time = 3
-		})
-		
-		
-	end    
+local Button = Tab:CreateButton({
+   Name = "V.G Хаб",
+   Callback = function()
+   loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+   NotifiyingUser()
+   end,
 })
-
-Tab:AddButton({
-	Name = "Dark Hub",
-	Callback = function()
-		loadstring(game:HttpGet(("https://darkhub.xyz/remote-script.lua"), true))()
-		OrionLib:MakeNotification({
-			Name = "Completed",
-			Content = "The script has fully loaded!",
-			Image = "rbxassetid://4483345998",
-			Time = 3
-		})
-		
-		
-	end    
+local Button = Tab:CreateButton({
+   Name = "Wet Хаб",
+   Callback = function()
+   loadstring(game:HttpGet("https://pastebin.com/raw/KFdDTVLT"))()
+   NotifiyingUser()
+   end,
 })
-
-Tab:AddButton({
-	Name = "CocoZ Hub",
-	Callback = function()
-		loadstring(game:HttpGet(('https://gitlab.com/cococc/cocohub/-/raw/master/CocoLoader'),true))()
-		OrionLib:MakeNotification({
-			Name = "Completed",
-			Content = "The script has fully loaded!",
-			Image = "rbxassetid://4483345998",
-			Time = 3
-		})
-		
-		
-	end    
-})
-
-Tab:AddButton({
-	Name = "Code Hub",
-	Callback = function()
-		loadstring(game:HttpGet("https://pastebin.com/raw/dwRdB740"))()
-		OrionLib:MakeNotification({
-			Name = "Completed",
-			Content = "The script has fully loaded!",
-			Image = "rbxassetid://4483345998",
-			Time = 3
-		})
-		
-		
-	end    
-})
-
-Tab:AddButton({
-	Name = "LioK Hub",
-	Callback = function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/LioK251/Scripts/main/LioKHUB", true))()
-		OrionLib:MakeNotification({
-			Name = "Completed",
-			Content = "The script has fully loaded!",
-			Image = "rbxassetid://4483345998",
-			Time = 3
-		})
-		
-		
-	end    
-})
-
-Tab:AddButton({
-	Name = "Straw Hub",
-	Callback = function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/vep1032/VepStuff/main/STRAW%20HUB%20RELEASE"))()
-		OrionLib:MakeNotification({
-			Name = "Completed",
-			Content = "The script has fully loaded!",
-			Image = "rbxassetid://4483345998",
-			Time = 3
-		})
-		
-		
-
-	end    
-})
-
-Tab:AddButton({
-	Name = "V. G. Hub",
-	Callback = function()
-		loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
-		OrionLib:MakeNotification({
-			Name = "Completed",
-			Content = "The script has fully loaded!",
-			Image = "rbxassetid://4483345998",
-			Time = 3
-		})
-		
-		
-	end    
-})
-
-Tab:AddButton({
-	Name = "Wet Hub",
-	Callback = function()
-		loadstring(game:HttpGet("https://pastebin.com/raw/KFdDTVLT"))()
-		OrionLib:MakeNotification({
-			Name = "Completed",
-			Content = "The script has fully loaded!",
-			Image = "rbxassetid://4483345998",
-			Time = 3
-		})
-		
-		
-	end    
-})
-
-
-
-local Tab = Window:MakeTab({
-	Name = "Settings",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
-
-Tab:AddButton({
-	Name = "Close script",
-	Callback = function()
-	OrionLib:Destroy()
-  	end    
-})
-
-Tab:AddLabel("If you notice a bug or want to suggest an idea,")
-Tab:AddLabel("then write to me in discord : o5_3counsil")
-
-
-
-
-local Tab = Window:MakeTab({
-	Name = "Universal scripts",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
-
-
-local Section = Tab:AddSection({
-	Name = "Universal scripts"
-})
-
---[[
-Name = <string> - The name of the section.
-]]
-
-Tab:AddButton({
-	Name = "Nameless Admin",
-	Callback = function()
-	loadstring(game:HttpGet('https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source'))()
-	OrionLib:MakeNotification({
-		Name = "Completed",
-		Content = "The script has fully loaded!",
-		Image = "rbxassetid://4483345998",
-		Time = 3
-	})
-	
-	
-  	end    
-})
-
-Tab:AddButton({
-	Name = "Infinity yield",
-	Callback = function()
-		loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
-		OrionLib:MakeNotification({
-			Name = "Completed",
-			Content = "The script has fully loaded!",
-			Image = "rbxassetid://4483345998",
-			Time = 3
-		})
-		
-		
-  	end    
-})
-
-Tab:AddButton({
-	Name = "Aimbot",
-	Callback = function()
-		loadstring(game:HttpGet('https://raw.githubusercontent.com/Exunys/Aimbot-Script/refs/heads/main/Aimbot%20Script.lua'))()
-		OrionLib:MakeNotification({
-			Name = "Completed",
-			Content = "The script has fully loaded!",
-			Image = "rbxassetid://4483345998",
-			Time = 3
-		})
-		
-		
-  	end    
-})
-
-Tab:AddButton({
-	Name = "ESP",
-	Callback = function()
-		loadstring(game:HttpGet('https://raw.githubusercontent.com/Exunys/ESP-Script/refs/heads/main/ESP.lua'))()
-		OrionLib:MakeNotification({
-			Name = "Completed",
-			Content = "The script has fully loaded!",
-			Image = "rbxassetid://4483345998",
-			Time = 3
-		})
-		
-		
-  	end    
+local Button = Tab:CreateButton({
+   Name = "Nut Хаб",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/Qrto1/working/main/pc"))()
+   NotifiyingUser()
+   end,
 })
 
 
 
 
-OrionLib:Init()
+
+
+
+
+local Tab = Window:CreateTab("Универсальные и обычные скрипты", 4483362458) -- Title, Image
+
+local Button = Tab:CreateButton({
+   Name = "Ninja legends",
+   Callback = function()
+   loadstring(game:HttpGet(("https://raw.githubusercontent.com/AppleScript001/Ninjas_Legends/main/README.md"),true))()
+   NotifiyingUser()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "War Tycoon AutoFarm",
+   Callback = function()
+   loadstring(game:HttpGet("https://pastebin.com/raw/4ZNScCgK"))()
+   NotifiyingUser()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Ultimate Battlegrounds",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/HenSeu87PofghYT/Ultimate-BattleGrounds/main/Nameless%20Scripts"))()
+   NotifiyingUser()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "The strongest Battlegrounds",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/skibiditoiletfan2007/BaldyToSorcerer/main/Latest.lua"))()
+   NotifiyingUser()
+   end,
+})
+local Label = Tab:CreateLabel("Работает только на сайтаме!")
+local Button = Tab:CreateButton({
+   Name = "Sirius Universal",
+   Callback = function()
+   loadstring(game:HttpGet('https://sirius.menu/sirius'))()
+   NotifiyingUser()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "YBA (ИМБА)",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/zakater5/LuaRepo/main/YBA/v3.lua"))()
+   NotifiyingUser()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Booga Booga",
+   Callback = function()
+   loadstring(game:HttpGet("https://lkhub.net/s/loader.lua"))()
+   NotifiyingUser()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Fisch",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/Lythicals/script/main/Fisch.lua"))()
+   NotifiyingUser()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "KAT",
+   Callback = function()
+   loadstring(game:HttpGet('https://raw.githubusercontent.com/discopro/open-source/main/dreamybull.lua'))()
+   NotifiyingUser()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Town копирование плотов (ИМБА)",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/timurgim/CheatS/refs/heads/main/town_plot_copier"))()
+   NotifiyingUser()
+   end,
+})
+
+
+
+local Tab = Window:CreateTab("Настройки", 4483362458) -- Title, Image
+
+local Button = Tab:CreateButton({
+   Name = "Полностью закрыть скрипт",
+   Callback = function()
+   Rayfield:Destroy()
+   end,
+})
+
+local Label = Tab:CreateLabel("Если нашли баги пишите мне в дс : o5_3counsil")
+
+local Label = Tab:CreateLabel("Если нашли нерабочие скрипты то тоже пишите мне!")
+
+local Label = Tab:CreateLabel("Код обновляется раз в несколько дней и когда обнова!")
+
+local Label = Tab:CreateLabel("Если вы хотите больше скриптов для плейсов то пишите в личку samuraa1!")
+
+local Label = Tab:CreateLabel("Я просто откажусь!")
